@@ -10,7 +10,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-@Table(name = "сompanies")
+@Table(name = "company")
 public class Company {
 
     @Id
