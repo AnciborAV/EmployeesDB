@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog  http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+    <changeSet id="insert_sample_data" author="anclav">
+        <sql>
+            insert into company (name)
+            values ('company1'),
+                   ('company2'),
+                   ('company3'),
+                   ('company4'),
+                   ('company5');
+
+            insert into employee (name)
+            values ('employee1'),
+                   ('employee2'),
+                   ('employee3'),
+                   ('employee4'),
+                   ('employee5'),
+                   ('employee6'),
+                   ('employee7');
+
+            insert into office (name)
+            values ('offce1'),
+                   ('offce2'),
+                   ('offce3'),
+                   ('offce4'),
+                   ('offce5'),
+                   ('offce6');
+
+        </sql>
+        <rollback>
+            drop table company;
+        </rollback>
+    </changeSet>
+</databaseChangeLog>
